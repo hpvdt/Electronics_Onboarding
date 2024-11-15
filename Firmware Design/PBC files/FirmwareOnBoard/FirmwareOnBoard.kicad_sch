@@ -12084,6 +12084,215 @@
 		)
 		(uuid fc4911ea-a224-48cf-9072-46d2dfff5145)
 	)
+	(text_box "C8 looks redundant here"
+		(exclude_from_sim no)
+		(at -17.78 146.05 0)
+		(size 35.56 5.08)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "00f8d651-604a-4de2-a5ac-3ded27b79342")
+	)
+	(text_box "I am not a fan of the GND pin being above 3.3V even if it makes the circuit smaller"
+		(exclude_from_sim no)
+		(at 147.32 17.78 0)
+		(size 46.99 5.08)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "330ca749-d358-46d5-91d9-024fae2f25b8")
+	)
+	(text_box "These Rxx's are uggo, you can place them inline and it'll be compact and easier to follow. See R24 to R26 below"
+		(exclude_from_sim no)
+		(at 177.8 115.57 0)
+		(size 31.75 8.89)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "4d253d8b-d669-453d-9ae1-49da32c65594")
+	)
+	(text_box "I think 7seg_0_{E} is an error here"
+		(exclude_from_sim no)
+		(at 170.18 81.28 0)
+		(size 8.89 11.43)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "928c2201-6621-4893-82e6-7fd005dbdab4")
+	)
+	(text_box "Add a buffer for the LEDs to prevent the microcontroller from needing to supply all the current needed for the LEDs and potentially damage itself."
+		(exclude_from_sim no)
+		(at 149.86 134.62 0)
+		(size 29.21 16.51)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "b46b5dc7-0ec6-4d1d-b24e-fb7e11145c50")
+	)
+	(text_box "This is a bit of a mess here"
+		(exclude_from_sim no)
+		(at 71.12 17.78 0)
+		(size 20.32 10.16)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "b8792037-11db-418e-a775-3bfce5dc9547")
+	)
+	(text_box "I really don't like this choice of voltage regulator: old and over powered. You won't need 3A of power for this board, realisitcally 200 mA tops.\n\nThe regulator is old so its got a low switching frequency, necessitating the use of this large value passives. For reference the modern Buck regulators used on Falcon needed single digit uF/uH parts which are way smaller and cheaper. Also since it is old it is not a synchronous switching supply, this means it needs that external diode for proper operation, modern synchronous switching regulators have a MOSFET built in to do the work of these diodes more efficiently too.\n\nAlso why are there two regulators for 3.3V? Just put a diode between the USB 5V and the battery so the current can flow out of the USB to power the system but not backdrive the USB host."
+		(exclude_from_sim no)
+		(at 21.59 203.2 0)
+		(size 96.52 34.29)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "cf5aa032-5a67-42b1-881f-e5d796cddb41")
+	)
+	(text_box "Some general comments:\n- It might be nice to have a couple GPIO broken out\n- The net labelling and capitalization scheme should be more consistent\n- Definitely go up to a bigger page or split this across sheets"
+		(exclude_from_sim no)
+		(at 83.82 -13.97 0)
+		(size 77.47 20.32)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "d5fe8b65-439a-4f72-88b2-4e079514386e")
+	)
+	(text_box "The nRF24 has a ~{CS} and CE signal, not ~CS and CS. Chip Select and Chip Enable (listen or send)."
+		(exclude_from_sim no)
+		(at 171.45 40.64 0)
+		(size 30.48 12.7)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "e093bb05-e337-458b-82ef-7fb99dc1d512")
+	)
+	(text_box "There nice symbols for nRF24 modules that you can use to ensure the right pinout: 'NRF24L01_Breakout'"
+		(exclude_from_sim no)
+		(at 175.26 55.88 0)
+		(size 31.75 10.16)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "e9278297-9204-453c-8e79-3ea7971607cd")
+	)
+	(text_box "Check if any of these ICs need their own decoupling capacitors (they certainly do)"
+		(exclude_from_sim no)
+		(at 273.05 138.43 0)
+		(size 31.75 7.62)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "ea922760-279f-4d1e-8dfd-95a4cfaf6c67")
+	)
 	(label "7seg_0_{G}"
 		(at 181.61 152.4 0)
 		(fields_autoplaced yes)
@@ -15864,7 +16073,7 @@
 		(dnp no)
 		(uuid "4a113a19-ff1d-46d7-bb66-c1710f10b127")
 		(property "Reference" "R24"
-			(at 190.246 132.588 90)
+			(at 191.77 138.43 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16218,7 +16427,7 @@
 		(dnp no)
 		(uuid "54d23559-ea78-4292-a163-5403a0d9e9a5")
 		(property "Reference" "R25"
-			(at 190.246 125.984 90)
+			(at 191.77 140.97 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18798,7 +19007,7 @@
 		(dnp no)
 		(uuid "9b34fad1-9e9d-4f33-b251-22009eba1db3")
 		(property "Reference" "R26"
-			(at 198.12 132.842 90)
+			(at 191.77 143.51 90)
 			(effects
 				(font
 					(size 1.27 1.27)
